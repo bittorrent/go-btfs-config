@@ -119,11 +119,11 @@ const DefaultConnMgrHighWater = 900
 
 // DefaultConnMgrLowWater is the default value for the connection managers 'low
 // water' mark
-const DefaultConnMgrLowWater = 600
+const DefaultConnMgrLowWater = 10
 
 // DefaultConnMgrGracePeriod is the default value for the connection managers
 // grace period
-const DefaultConnMgrGracePeriod = time.Second * 20
+const DefaultConnMgrGracePeriod = time.Second * 10
 
 // DefaultConnMgrType is the default value for the connection managers
 // type.
