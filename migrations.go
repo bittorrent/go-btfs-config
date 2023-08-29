@@ -258,6 +258,16 @@ func migrate_17_Sync_Hosts(cfg *Config) bool {
 	return false
 }
 
+func migrate_18_S3CompatibleAPI(cfg *Config) bool {
+	if len(cfg.S3CompatibleAPI.Address) == 0 {
+		cfg.S3CompatibleAPI.Enable = false
+		cfg.S3CompatibleAPI.Address = "127.0.0.1:6001"
+		cfg.S3CompatibleAPI.HTTPHeaders = nil
+		return true
+	}
+	return false
+}
+
 // MigrateConfig migrates config options to the latest known version
 // It may correct incompatible configs as well
 // inited = just initialized in the same call
@@ -283,5 +293,6 @@ func MigrateConfig(cfg *Config, inited, hasHval bool) bool {
 	updated = migrate_15_MissingRemoteAPI(cfg) || updated
 	updated = migrate_16_TrongridDomain(cfg) || updated
 	updated = migrate_17_Sync_Hosts(cfg) || updated
+	updated = migrate_18_S3CompatibleAPI(cfg) || updated
 	return updated
 }

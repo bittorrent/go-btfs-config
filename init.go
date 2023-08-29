@@ -72,7 +72,8 @@ func Init(out io.Writer, nBitsForKeypair int, keyType string, importKey string, 
 			},
 			APICommands: []string{},
 		},
-		Services: DefaultServicesConfig(),
+		S3CompatibleAPI: DefaultS3CompatibleAPIConfig(),
+		Services:        DefaultServicesConfig(),
 		Reprovider: Reprovider{
 			Interval: NewOptionalDuration(time.Hour * 12),
 			Strategy: NewOptionalString("all"),
@@ -210,6 +211,14 @@ func flatfsSpec() map[string]interface{} {
 				},
 			},
 		},
+	}
+}
+
+func DefaultS3CompatibleAPIConfig() S3CompatibleAPI {
+	return S3CompatibleAPI{
+		Address:     "127.0.0.1:6001",
+		Enable:      false,
+		HTTPHeaders: nil,
 	}
 }
 
