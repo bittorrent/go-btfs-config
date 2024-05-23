@@ -14,23 +14,24 @@ import (
 
 // Config is used to load ipfs config files.
 type Config struct {
-	ChainInfo ChainInfo // local node's chain info
-	Identity  Identity  // local node's peer identity
-	Datastore Datastore // local node's storage
-	Addresses Addresses // local node's addresses
-	Mounts    Mounts    // local node's mount points
-	Discovery Discovery // local node's discovery mechanisms
-	Routing   Routing   // local node's routing settings
-	Ipns      Ipns      // Ipns settings
-	Bootstrap []string  // local nodes's bootstrap peer addresses
-	Gateway   Gateway   // local node's gateway server options
-	API       API       // local node's API settings
-	Swarm     SwarmConfig
-	AutoNAT   AutoNATConfig
-	Pubsub    PubsubConfig
-	Peering   Peering
-	DNS       DNS
-	Services  Services // External service domains and info
+	ChainInfo       ChainInfo       // local node's chain info
+	Identity        Identity        // local node's peer identity
+	Datastore       Datastore       // local node's storage
+	Addresses       Addresses       // local node's addresses
+	Mounts          Mounts          // local node's mount points
+	Discovery       Discovery       // local node's discovery mechanisms
+	Routing         Routing         // local node's routing settings
+	Ipns            Ipns            // Ipns settings
+	Bootstrap       []string        // local nodes's bootstrap peer addresses
+	Gateway         Gateway         // local node's gateway server options
+	API             API             // local node's API settings
+	S3CompatibleAPI S3CompatibleAPI //s3-compatible-api settings
+	Swarm           SwarmConfig
+	AutoNAT         AutoNATConfig
+	Pubsub          PubsubConfig
+	Peering         Peering
+	DNS             DNS
+	Services        Services // External service domains and info
 
 	Provider     Provider
 	Reprovider   Reprovider
