@@ -144,7 +144,7 @@ type ConnMgr struct {
 type ResourceMgr struct {
 	// Enables the Network Resource Manager feature, default to on.
 	Enabled Flag               `json:",omitempty"`
-	Limits  *rcmgr.LimitConfig `json:",omitempty"`
+	Limits  *rcmgr.PartialLimitConfig `json:",omitempty"`
 
 	MaxMemory          *OptionalString  `json:",omitempty"`
 	MaxFileDescriptors *OptionalInteger `json:",omitempty"`
