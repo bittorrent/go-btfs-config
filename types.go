@@ -1,8 +1,10 @@
 package config
 
 import (
+	"bytes"
 	"encoding/json"
 	"fmt"
+	"io"
 	"strings"
 	"time"
 )
@@ -407,3 +409,32 @@ func (p OptionalString) String() string {
 
 var _ json.Unmarshaler = (*OptionalInteger)(nil)
 var _ json.Marshaler = (*OptionalInteger)(nil)
+
+// doNotUse is a type you must not use, it should be struct{} but encoding/json
+// does not support omitempty on structs and I can't be bothered to write custom
+// marshalers on all structs that have a doNotUse field.
+type doNotUse bool
+
+type swarmLimits doNotUse
+
+var _ json.Unmarshaler = swarmLimits(false)
+
+func (swarmLimits) UnmarshalJSON(b []byte) error {
+	d := json.NewDecoder(bytes.NewReader(b))
+	for {
+		switch tok, err := d.Token(); err {
+		case io.EOF:
+			return nil
+		case nil:
+			switch tok {
+			case json.Delim('{'), json.Delim('}'):
+				// accept empty objects
+				continue
+			}
+			//nolint
+			return fmt.Errorf("The Swarm.ResourceMgr.Limits configuration has been removed and should be empty or not present. To set custom libp2p limits, read https://github.com/ipfs/kubo/blob/master/docs/libp2p-resource-management.md#user-supplied-override-limits")
+		default:
+			return err
+		}
+	}
+}
