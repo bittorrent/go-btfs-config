@@ -15,7 +15,7 @@ import (
 // NOTE: This is here -- and not inside cmd/btfs/init.go -- because of an
 // import dependency issue. TODO: move this into a config/default/ package.
 var DefaultBootstrapAddresses = []string{
-	"/ip4/63.176.242.235/tcp/4001/p2p/16Uiu2HAmT9HSazxmnS4ucPY3Zpq2B5NT3wbiJi9ETurkVGGpxa57",
+	"/ip4/63.176.242.235/tcp/4001/p2p/16Uiu2HAmVeJwSMkeaEXEZdDAtxM6mngAALjTPwq4w2suehMVPwA5",
 	"/ip4/3.66.98.120/tcp/4001/p2p/16Uiu2HAmVSpShqGg8c7dEuG8qSWZjisx1rxNFwgAAi47HKHHXFr4",
 	"/ip4/54.179.164.197/tcp/4001/p2p/16Uiu2HAmVZP7ueF6jkSsMvqPEZgGGEMURtn5MZiz1KGP7FQWvHU8",
 	"/ip4/18.138.163.50/tcp/4001/p2p/16Uiu2HAm2RX2aMwcHMsEvLzqQ76Jm5bcK9Ut869pipZ9UPSuG9zB",
