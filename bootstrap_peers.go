@@ -15,26 +15,13 @@ import (
 // NOTE: This is here -- and not inside cmd/btfs/init.go -- because of an
 // import dependency issue. TODO: move this into a config/default/ package.
 var DefaultBootstrapAddresses = []string{
-	"/ip4/63.176.242.235/tcp/4001/p2p/16Uiu2HAmVeJwSMkeaEXEZdDAtxM6mngAALjTPwq4w2suehMVPwA5",
-	"/ip4/3.66.98.120/tcp/4001/p2p/16Uiu2HAmVSpShqGg8c7dEuG8qSWZjisx1rxNFwgAAi47HKHHXFr4",
-	"/ip4/54.179.164.197/tcp/4001/p2p/16Uiu2HAmVZP7ueF6jkSsMvqPEZgGGEMURtn5MZiz1KGP7FQWvHU8",
-	"/ip4/18.138.163.50/tcp/4001/p2p/16Uiu2HAm2RX2aMwcHMsEvLzqQ76Jm5bcK9Ut869pipZ9UPSuG9zB",
-	"/ip4/15.184.198.54/tcp/4001/p2p/16Uiu2HAmU6iej57dbFD1qEcG2UtSBc1KUXgSAph23AcagDsLBhxW",
-	"/ip4/15.185.79.232/tcp/4001/p2p/16Uiu2HAmQ2Gjyjevt1MhZm7zmQiBjXSdoupLTc6dLLotwBJ7jian",
-	"/ip4/3.7.21.138/tcp/4001/p2p/16Uiu2HAm7QD77kxSKf1GTM3YkrYp8vkhUwS2ySJPht9jALeaHaft",
-	"/ip4/43.204.199.237/tcp/4001/p2p/16Uiu2HAm3tpaz9zgqB4i2FEwX7dwTJzv88Krpdy3kRecXZos3WdM",
-	"/ip4/35.155.192.241/tcp/4001/p2p/16Uiu2HAm29iAxcKRPNRBVMYCz455uck5o7KmdPJ9GQ5BKvpxxca9",
-	"/ip4/35.83.203.96/tcp/4001/p2p/16Uiu2HAmNnKCdkBKdoPo4sXSLhDgXvPmCi7NCjo8cfcP5RRb4mKL",
-	"/ip4/35.72.132.60/tcp/4001/p2p/16Uiu2HAmSwJux2LgfMjQn8CzcG8jufKHbkRm9fQAqEASumU2R38h",
-	"/ip4/52.198.239.158/tcp/4001/p2p/16Uiu2HAmQ6YjTL2LCxiYjpRXuukchFjDwm5p7HRjj6nLGcrjwEsL",
-	"/ip4/13.57.144.203/tcp/4001/p2p/16Uiu2HAm5SdP8So2MpknrEAi6avMVXokEuujynKkXRPnxaTxtn5W",
-	"/ip4/54.176.58.20/tcp/4001/p2p/16Uiu2HAmPLc4QAuN6gmSUZKYWF1Kh22TFxTANFQYrKHmhh31hikk",
-	"/ip4/3.130.97.111/tcp/4001/p2p/16Uiu2HAm5Kd8T7GphFK2kUwfQXEPa6nKwYtkzZKr2R2VoB3PBhNF",
-	"/ip4/3.131.15.203/tcp/4001/p2p/16Uiu2HAm4afRu4ny2rcseF34JYNut1TLoenfufAR8SDiDHPZz6Zz",
-	"/ip4/3.133.9.176/tcp/4001/p2p/16Uiu2HAmGXv3CDUK8FpV1rBCpGtGsV3rxGshcgBiHTDxYHrbic2Q",
-	"/ip4/3.17.210.15/tcp/4001/p2p/16Uiu2HAmSiBrUTxeYj9FXxeHYcboTz8NMyPgDkfjB5yAag3opKur",
-	"/ip4/13.40.252.137/tcp/4001/p2p/16Uiu2HAmKM8d2mZ4yNHJ1GZj3FDVD1BXE8Qg7TUBMexkbMGWWbnR",
-	"/ip4/13.43.125.230/tcp/4001/p2p/16Uiu2HAkz6Uz3fv2vHPEmn5He89emRZmiToJg7fZaG7MwUob7qr1",
+	"/ip4/18.136.226.97/tcp/4001/p2p/16Uiu2HAmMd1ULqj9NYUrzYfBmf3HNzZiaVVUzh1Kw9e6KKyuM44i",
+	"/ip4/46.137.235.243/tcp/4001/p2p/16Uiu2HAm9tCJYQUcSzdXh97ozWZPLFyCEw7aHQ9ecziaTJvhgJGN",
+	"/ip4/52.221.92.104/tcp/4001/p2p/16Uiu2HAmJ9FsJ8mTJBrCfYFp1qPBTSGNehMepGW31ChjXMeRreqY",
+	"/ip4/18.136.15.120/tcp/4001/p2p/16Uiu2HAkzdyYeBq3nnAvYNoU6yf7pxyHBb6mcydcXRMoyKgZvJ13",
+	"/ip4/18.136.83.220/tcp/4001/p2p/16Uiu2HAmHVYxr5hBqjVBJTaPgbTmThgafu8vUp9eH8pLYJSxcdp4",
+	"/ip4/18.142.75.133/tcp/4001/p2p/16Uiu2HAmJvmJ5mpYWFkDtSewyMNSoxedpesVTMeQriTDbxoByXKN",
+	"/ip4/18.136.66.54/tcp/4001/p2p/16Uiu2HAm2LG39zT4HoWU2s2nD6xTrj7dzZAFS3fHKfNKJWHkGZgn",
 }
 var DefaultTestnetBootstrapAddresses = []string{
 	"/ip4/18.224.174.215/tcp/45301/p2p/16Uiu2HAmFFwNdgSoLhfgJUPEfPEVodppRxaeZBVpAvrH5s3qSkWo",
