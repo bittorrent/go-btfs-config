@@ -97,6 +97,7 @@ func Init(out io.Writer, nBitsForKeypair int, keyType string, importKey string, 
 			HostsSyncEnabled:     DefaultHostsSyncEnabled,
 			HostsSyncFlag:        true,
 			HostsSyncMode:        DefaultHostsSyncMode.String(),
+			EnableProxyMode:      DefaultEnableProxyMode,
 		},
 		ChainInfo: ChainInfo{
 			ChainId: bttcChainID,
@@ -145,6 +146,8 @@ d0566ce7e71d880487a89385296ab8a454967e975955ce0e59bff7991d5539d6`
 const DefaultSwarmPort = 4001
 
 const DefaultEnableAutoRelay = true
+
+const DefaultEnableProxyMode = false
 
 func addressesConfig() Addresses {
 	return Addresses{
