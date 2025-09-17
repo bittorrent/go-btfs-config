@@ -21,4 +21,5 @@ type Experiments struct {
 	ReportOnline         bool
 	ReportStatusContract bool
 	AcceleratedDHTClient bool
+	EnableProxyMode      bool
 }
